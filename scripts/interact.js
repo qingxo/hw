@@ -20,7 +20,7 @@ const helloWorldContract = new ethers.Contract(CONTRACT_ADDRESS, constract.abi, 
 async function main() {
     const message = await helloWorldContract.message();
     console.log("The message is:" + message);
-    const tx = await helloWorldContract.update("Now i'm back! ");
+    const tx = await helloWorldContract.update("kaka world!");
     await tx.wait();
 
     const newMessage = await helloWorldContract.message();
